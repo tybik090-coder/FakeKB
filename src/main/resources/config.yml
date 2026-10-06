@@ -1,0 +1,121 @@
+# FakeKB / FakeWorld — Королевская битва
+settings:
+  min-players: 5
+  lobby-radius: 25
+  lobby-countdown-seconds: 15
+  cage-countdown-seconds: 30
+  world-name-prefix: fakekb_
+  startup-schematic: startup
+  schematic-paste:
+    x: 0
+    y: 100
+    z: 0
+  phase4-teleport:
+    x: 0
+    z: 0
+  world-border:
+    center-x: 0.0
+    center-z: 0.0
+    start-size: 1500.0
+    end-size: 50.0
+    phase4-size: 80.0
+  scan:
+    start-cages-radius: 80
+    start-cages-y-min: 80
+    start-cages-y-max: 140
+    finale-cages-radius: 64
+    finale-cages-y-min: 1
+    finale-cages-y-max: 320
+
+phases:
+  phase1-seconds: 180
+  phase2-seconds: 1200
+  phase3-seconds: 900
+  phase4-seconds: 600
+  end-delay-seconds: 8
+
+lobby:
+  world: ""
+  x: 0.0
+  y: 100.0
+  z: 0.0
+  yaw: 0.0
+  pitch: 0.0
+  set: false
+
+bossbar:
+  lobby-title: "<white>FakeKB</white> <dark_gray>•</dark_gray> <gradient:#FF2E63:#FF9F1C>игроков в зоне: <bold>{count}</bold></gradient> <gray>/ {min}</gray>"
+  countdown-title: "<gradient:#FF2E63:#FF9F1C>Старт через {seconds}с</gradient> <dark_gray>•</dark_gray> <white>{count}</white><gray>/{min}</gray>"
+  game-title: "<gradient:#FF2E63:#FF9F1C>{phase}</gradient> <dark_gray>•</dark_gray> <white>{time}</white> <dark_gray>•</dark_gray> <gray>живых:</gray> <white>{alive}</white>"
+  lobby-color: PINK
+  game-color: RED
+
+kits:
+  default: ASSASSIN
+
+messages:
+  prefix: "<gray>[</gray><bold><gradient:#FF2E63:#FF9F1C>FakeKB</gradient></bold><gray>]</gray> "
+  line: "<gradient:#FF2E63:#FF9F1C:#8338EC:#FF2E63>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</gradient>"
+  no-permission: "<red>Недостаточно прав для этой команды.</red>"
+  reload: "<green>Конфиг и сообщения перезагружены.</green>"
+  lobby-set: "<green>Точка лобби установлена.</green> <gray>Радиус сканирования: {radius} блоков.</gray>"
+  lobby-not-set: "<red>Сначала установите лобби:</red> <white>/fkb setlobby</white>"
+  radius-set: "<green>Радиус зоны лобби:</green> <white>{radius}</white> <gray>блоков.</gray>"
+  radius-usage: "<gray>Использование:</gray> <white>/fkb rangelobby <радиус></white>"
+  already-running: "<red>Королевская битва уже идёт.</red>"
+  not-running: "<red>Сейчас нет активной королевской битвы.</red>"
+  start-forced: "<yellow>Принудительный запуск КБ...</yellow>"
+  start-no-players: "<red>В зоне лобби нет игроков для запуска.</red>"
+  stop: "<yellow>Королевская битва остановлена. Все возвращены в лобби.</yellow>"
+  countdown-cancelled: "<red>Отсчёт отменён:</red> <gray>в зоне меньше {min} игроков.</gray>"
+  countdown-tick: "<gray>Старт КБ через</gray> <white>{seconds}с</white>"
+  teleport-lobby: "<gray>Вы возвращены в лобби FakeKB.</gray>"
+  cages-found: "<gray>Найдено кабинок:</gray> <white>{count}</white>"
+  schematic-missing: "<red>Схематика <white>{name}</white> не найдена в папке schem.</red>"
+  schematic-ok: "<green>Схема <white>{name}</white> загружена.</green> <gray>Формат: {format}, размер: {size}.</gray>"
+  schematic-fail: "<red>Не удалось прочитать схему <white>{name}</white>.</red> <gray>{error}</gray>"
+  worldedit-missing: "<red>Для схематик нужен WorldEdit или FastAsyncWorldEdit.</red>"
+  world-fail: "<red>Не удалось создать мир КБ.</red>"
+  kit-selected: "<green>Выбран кит:</green> <white>{kit}</white>"
+  kit-given: "<gray>Выдан кит</gray> <white>{kit}</white> <gray>на фазу майнинга.</gray>"
+  eliminated: "<red>{player}</red> <gray>выбывает.</gray> <dark_gray>(осталось {alive})</dark_gray>"
+  winner: "<bold><gradient:#FFD700:#FF9F1C>Победитель — {player}!</gradient></bold>"
+  no-winner: "<gray>Победитель не определён.</gray>"
+  phase-cage: "<gradient:#FF2E63:#FF9F1C>Кабинки</gradient> <gray>• выход заблокирован. Старт через {seconds}с.</gray>"
+  phase-1: "<bold><red>Фаза 1 — PvP</red></bold> <gray>• 3 минуты чистого хаоса.</gray>"
+  phase-2: "<bold><aqua>Фаза 2 — Майнинг</aqua></bold> <gray>• киты выданы, 20 минут.</gray>"
+  phase-3: "<bold><gold>Фаза 3 — Сужение</gold></bold> <gray>• барьер сжимается 15 минут.</gray>"
+  phase-4-cage: "<bold><light_purple>Финал</light_purple></bold> <gray>• кабинки на (0, 0). Бой через {seconds}с.</gray>"
+  phase-4: "<bold><light_purple>Фаза 4 — Финальный PvP</light_purple></bold>"
+  check-usage: "<gray>Использование:</gray> <white>/fkb check <название></white>"
+
+  help:
+    - "<gradient:#FF2E63:#FF9F1C:#8338EC:#3A86FF:#FF2E63>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</gradient>"
+    - "   <bold><gradient:#FF2E63:#FF9F1C>⚔ FakeKB</gradient></bold>  <dark_gray>│</dark_gray>  <white>Королевская битва</white>"
+    - "   <gray>Команды режима FakeWorld</gray>"
+    - "<gradient:#FF2E63:#FF9F1C:#8338EC:#3A86FF:#FF2E63>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</gradient>"
+    - "<#FF2E63>└ <white>/fkb help</white> <dark_gray>—</dark_gray> <gray>список всех команд</gray>"
+    - "<#FF4B6E>└ <white>/fkb setlobby</white> <dark_gray>—</dark_gray> <gray>точка лобби и зона сканирования</gray>"
+    - "<#FF6B4A>└ <white>/fkb rangelobby</white> <dark_gray>—</dark_gray> <gray>радиус поиска игроков в лобби</gray>"
+    - "<#FF9F1C>└ <white>/fkb start</white> <dark_gray>—</dark_gray> <gray>принудительный запуск КБ</gray>"
+    - "<#FFC14A>└ <white>/fkb stop</white> <dark_gray>—</dark_gray> <gray>остановить КБ и вернуть всех в лобби</gray>"
+    - "<#8338EC>└ <white>/fkb check <схема></white> <dark_gray>—</dark_gray> <gray>проверка .schem / .litematic</gray>"
+    - "<#3A86FF>└ <white>/fkb reload</white> <dark_gray>—</dark_gray> <gray>перезагрузить плагин и конфиг</gray>"
+    - "<gradient:#FF2E63:#FF9F1C:#8338EC:#3A86FF:#FF2E63>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</gradient>"
+    - "  <gray>Алиас:</gray> <white>/fakekb</white> <dark_gray>=</dark_gray> <white>/fkb</white>"
+    - "  <gray>Автостарт от</gray> <white>{min}</white> <gray>игроков в радиусе</gray> <white>{radius}</white>"
+    - "<gradient:#FF2E63:#FF9F1C:#8338EC:#3A86FF:#FF2E63>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</gradient>"
+
+  titles:
+    cage: "<gold><bold>{seconds}</bold></gold>"
+    cage-sub: "<gray>Не покидайте кабинку</gray>"
+    phase1: "<red><bold>ФАЗА 1</bold></red>"
+    phase1-sub: "<white>PvP без ограничений</white>"
+    phase2: "<aqua><bold>ФАЗА 2</bold></aqua>"
+    phase2-sub: "<white>Майнинг • кит выдан</white>"
+    phase3: "<gold><bold>ФАЗА 3</bold></gold>"
+    phase3-sub: "<white>Барьер сужается</white>"
+    phase4: "<light_purple><bold>ФИНАЛ</bold></light_purple>"
+    phase4-sub: "<white>Последний бой</white>"
+    win: "<gold><bold>ПОБЕДА</bold></gold>"
+    win-sub: "<white>{player}</white>"

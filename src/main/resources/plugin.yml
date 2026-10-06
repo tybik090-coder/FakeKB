@@ -1,0 +1,22 @@
+name: FakeKB
+version: ${project.version}
+main: dev.decmopl.fakekb.FakeKBPlugin
+api-version: "1.21"
+description: Королевская битва FakeKB / FakeWorld
+author: FakeKB
+softdepend:
+  - Multiverse-Core
+  - WorldEdit
+  - FastAsyncWorldEdit
+commands:
+  fakekb:
+    description: Команды режима Королевская битва
+    aliases: [fkb]
+    usage: /<command> help
+permissions:
+  fakekb.admin:
+    description: Админ-команды FakeKB
+    default: op
+  fakekb.use:
+    description: Базовые команды FakeKB
+    default: true
